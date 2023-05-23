@@ -1,0 +1,1 @@
+pip install pandas matplotlib numpy statsmodels seaborn scipy scikit-learn tsaug openpyxl keras deap prophet pdarima tensorflow networkx deap
