@@ -1,7 +1,7 @@
 
 import pandas as pd
 
-df = pd.read_excel(r'/Users/rems/Library/CloudStorage/OneDrive-UniversityofBath/IMEE_FYP/Code/SovereignEmissionsDataset.xlsx')
+df = pd.read_excel(r'"Input directory here"/SovereignEmissionsDataset.xlsx') # change to the directory the file is stored on
 df.columns = df.iloc[1]
 df = df.iloc[2:,]
 df = df.set_index("Party")
