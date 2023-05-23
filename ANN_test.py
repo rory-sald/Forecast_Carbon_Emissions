@@ -132,10 +132,7 @@ for p in n_lookback:
 
 
 					history=model.fit(trainX,trainY, epochs=k, batch_size=l, verbose=0, validation_data=(testX,testY))
-					# train_score = model.evaluate(trainX, trainY, verbose=0)
-					# Save the model to a file
-					
-					# test_score = model.evaluate(testX, testY, verbose=0)
+
 					future_predictions = []
 					x_input = np.reshape(np.concatenate([trainX[-1], [trainY[-1]]])[1:],(1,i))
 					#x_input = trainX[-1]
@@ -147,7 +144,7 @@ for p in n_lookback:
 									# model_loss(history)
 					predictions =  future_predictions
 					
-					# prediction_plot(UK_ES, scaler.inverse_transform(np.array(predictions).reshape(-1,1)))
+					prediction_plot(UK_ES, scaler.inverse_transform(np.array(predictions).reshape(-1,1)))
 					MAPE = mape(scaler.inverse_transform(np.array(test).reshape(-1,1)),scaler.inverse_transform(np.array(predictions).reshape(-1,1)))
 					MAPEA.append([MAPE,[i,j,k,l,p]])
 					print("config", i,j,k,l,p)
