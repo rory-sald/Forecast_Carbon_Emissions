@@ -11,7 +11,7 @@ import pickle
 data = {}
 blank_df = pd.DataFrame({"Constituent Name":[np.nan],"CO2 Equivalent Emissions Total":[np.nan],"CO2 Equivalent Emissions Direct, Scope 1" : [np.nan], "CO2 Equivalent Emissions Indirect, Scope 2": [np.nan],"CO2 Equivalent Emissions Indirect, Scope 3":[np.nan]}, index = [np.nan])
 
-df = pd.read_excel(r'/Users/rems/Library/CloudStorage/OneDrive-UniversityofBath/IMEE_FYP/Code/FTSE 100 DATA.xlsx',sheet_name= "NEW")
+df = pd.read_excel(r'"Input Directory"/FTSE 100 DATA.xlsx',sheet_name= "NEW") # change input directory to your directory
 df.columns = df.iloc[1]
 df = df.set_index("Constituent Name")
 df = df.iloc[2:,]
