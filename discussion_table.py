@@ -44,8 +44,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Assuming you already have the DataFrame named 'df'
-
 # Use describe() to calculate summary statistics
 summary_stats = df.describe().iloc[:, 1:-1]
 
